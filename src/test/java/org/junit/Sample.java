@@ -12,8 +12,7 @@ public class Sample extends BaseClass{
      public static void beforeClass() {
 		System.setProperty("webdriver.chrome.driver","C:\\Gayu\\Selenium\\src\\Driver\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 		System.out.println("Before Class");
 	}
