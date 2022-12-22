@@ -43,7 +43,7 @@ public class Sample extends BaseClass{
 	}
 	@Test 
 	public void test1() {
-		urlLaunch("https://www.facebook.com/");
+		urlLaunch("https:/www.faccebook.com/");
 		WebElement btncreate = driver.findElement(By.xpath("(//a[@role='button'])[2]"));
 		btncreate.click();
 		WebElement firstname = driver.findElement(By.name("firstname"));
