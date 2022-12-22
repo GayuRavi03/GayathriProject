@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class Sample extends BaseClass{
      static WebDriver driver;
 	@BeforeClass
@@ -23,14 +22,12 @@ public class Sample extends BaseClass{
 	}
 	@Before
 	public void before() {
-		Date d=new Date();
-		System.out.println("Test Start.."+d);
+		System.out.println("Test Start.."+new Date());
       System.out.println("Before");
 	}
 	@After
 	public void after() {
-		Date d=new Date();
-		System.out.println("Test end.."+d);
+		System.out.println("Test end.."+new Date());
        System.out.println("After");
 	}
 	@Test
@@ -46,7 +43,7 @@ public class Sample extends BaseClass{
 	}
 	@Test 
 	public void test1() {
-		driver.get("https://www.facebook.com/");
+		urlLaunch("https://www.facebook.com/");
 		WebElement btncreate = driver.findElement(By.xpath("(//a[@role='button'])[2]"));
 		btncreate.click();
 		WebElement firstname = driver.findElement(By.name("firstname"));
